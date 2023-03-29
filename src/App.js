@@ -5,17 +5,34 @@ import Login from './components/Login';
 import { DndProvider } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
 import TaskManager from "./components/cardPage/TaskManager"
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Routes,
+  Link
+} from "react-router-dom";
+import Home from './components/Home';
+import Cards from './components/Cards';
 
 function App() {
   return (
-    <DndProvider backend={HTML5Backend}>
+    <Router>
+      {/* <DndProvider backend={HTML5Backend}> */}
       <div className="App">
-        <InputForum />
-        <Login />
+        {/* the routes */}
+
+        <Routes>
+          <Route exact path='/' element={<Home />} />
+          <Route path="/inputForum" element={<InputForum />} />
+          <Route path="/login" element={<Login />} />
+          <Route path='/cards' element={<Cards />} />
+        </Routes>
         {/* not really working, it's gaving me too manay errors */}
         {/* <TaskManager /> */}
       </div>
-    </DndProvider>
+      {/* </DndProvider> */}
+    </Router>
   );
 }
 

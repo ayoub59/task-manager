@@ -80,7 +80,7 @@ const InputForum = () => {
 
                         <FormControl >
                             <InputLabel id="assignee-label">Assignee</InputLabel>
-                            <Select labelId="assignee-label" value={assignee} onChange={handleAssigneeChange}>
+                            <Select labelId="assignee-label" label="Assignee" value={assignee} onChange={handleAssigneeChange}>
                                 <MenuItem value="">None</MenuItem>
                                 <MenuItem value="Alice">Alice</MenuItem>
                                 <MenuItem value="Bob">Bob</MenuItem>
@@ -90,7 +90,7 @@ const InputForum = () => {
 
                         <FormControl >
                             <InputLabel id="urgency-label">Urgency</InputLabel>
-                            <Select labelId="urgency-label" value={urgency} onChange={handleUrgencyChange}>
+                            <Select labelId="urgency-label" label="Urgency" value={urgency} onChange={handleUrgencyChange}>
                                 <MenuItem value="">None</MenuItem>
                                 <MenuItem value="high">High</MenuItem>
                                 <MenuItem value="medium">Medium</MenuItem>
@@ -149,11 +149,18 @@ const SectionsContainer = styled.div`
     gap: 30px;
     padding: 2vw;
 `
-const HeadingContainer = styled.div``
-const Heading = styled.h1``
+const HeadingContainer = styled.div`
+display : flex;
+`
+const Heading = styled.h1`
+color: gray;
+`;
 const Close = styled.img``
+
 const IconBtn = styled.button`
 border: none;
 background-color: transparent;
 cursor: pointer;
+position: relative;
+    top: 5px;
 `
