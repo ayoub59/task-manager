@@ -1,8 +1,9 @@
 import React from 'react'
+import TaskManager from './cardPage/TaskManager'
 
 function Cards() {
     return (
-        <div>Cards</div>
+        <div><TaskManager /></div>
     )
 }
 

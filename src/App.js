@@ -18,20 +18,18 @@ import Cards from './components/Cards';
 function App() {
   return (
     <Router>
-      {/* <DndProvider backend={HTML5Backend}> */}
-      <div className="App">
-        {/* the routes */}
+      <DndProvider backend={HTML5Backend}>
+        <div className="App">
+          {/* the routes */}
 
-        <Routes>
-          <Route exact path='/' element={<Home />} />
-          <Route path="/inputForum" element={<InputForum />} />
-          <Route path="/login" element={<Login />} />
-          <Route path='/cards' element={<Cards />} />
-        </Routes>
-        {/* not really working, it's gaving me too manay errors */}
-        {/* <TaskManager /> */}
-      </div>
-      {/* </DndProvider> */}
+          <Routes>
+            <Route exact path='/' element={<Home />} />
+            <Route path="/inputForum" element={<InputForum />} />
+            <Route path="/login" element={<Login />} />
+            <Route path='/cards' element={<Cards />} />
+          </Routes>
+        </div>
+      </DndProvider>
     </Router>
   );
 }
